@@ -111,17 +111,17 @@ import thankYouBg from '../assets/images/thank-you-bg.png'
           </div>
         </div>
 
-        <!-- "B" initial — KD-Aureligena font -->
+        <!-- "D" initial — KD-Aureligena font (Cursive overlay) -->
         <div id="w-06fskfrb" class="com-text-block p-absolute is-animation">
           <div class="text-block">
-            <h2 class="text-block-css full-width">B</h2>
+            <h2 class="text-block-css full-width">D</h2>
           </div>
         </div>
 
-        <!-- "D" initial — FzQuagera font -->
+        <!-- "N" initial — FzQuagera font (Serif base) -->
         <div id="w-whvexl1r" class="com-text-block p-absolute is-animation">
           <div class="text-block">
-            <h2 class="text-block-css full-width">D</h2>
+            <h2 class="text-block-css full-width">N</h2>
           </div>
         </div>
 

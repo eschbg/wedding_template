@@ -9690,6 +9690,7 @@
 .left-wing {
   left: 0;
   width: 65%;
+  z-index: 2;
   background-position: right center;
 }
 

@@ -59,7 +59,7 @@
         </div>
 
         <!-- Direction link — Vu Quy -->
-        <a href="https://maps.app.goo.gl/QJcR6GVdq5zEAr3j7"
+        <a href="https://maps.app.goo.gl/JHZaTb22oUvPgxwz6"
           title="Mở bản đồ Nhà Gái" id="w-7qyzakqq"
           class="p-absolute is-animation group-auto-scroll sroll-size">
           <div class="group-container">
@@ -249,7 +249,7 @@
         </div>
 
         <!-- Direction link — Thanh Hon -->
-        <a href="https://maps.app.goo.gl/eedrf2gAmYfsT5Zr7"
+        <a href="https://maps.app.goo.gl/pVARrtfB6MfoqYjA9"
           title="Mở bản đồ Nhà Trai" id="w-9xkpyyyd"
           class="p-absolute is-animation group-auto-scroll sroll-size">
           <div class="group-container">

@@ -13,8 +13,8 @@ import gallery3 from '../assets/images/gallery-3.jpg'
 import gallery4 from '../assets/images/gallery-4.jpg'
 
 // --- QR Images ---
-import brideQr from '../assets/images/bride-qr.jpg'
-import groomQr from '../assets/images/groom-qr.jpg'
+import brideQr from '../assets/images/qr-cd.jpg'
+import groomQr from '../assets/images/qr-cr.png'
 
 // === GALLERY ===
 const images = [gallery5, gallery6, gallery0, gallery1, gallery2, gallery3, gallery4]
@@ -47,6 +47,11 @@ const isSubmitting = ref(false)
 const submitSuccess = ref(false)
 const submitError = ref(null)
 const showGiftModal = ref(false)
+const zoomedQr = ref(null)
+
+const openZoom = (imgSrc) => {
+  zoomedQr.value = imgSrc
+}
 
 const api = axios.create({ baseURL: 'http://localhost:8080', timeout: 10000 })
 
@@ -351,21 +356,66 @@ onUnmounted(() => {
 
   <!-- Gift Modal (QR codes) -->
   <div v-if="showGiftModal" class="com-popup popup-center" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:1000001;display:flex;align-items:center;justify-content:center;">
-    <div class="popup-backdrop" @click="showGiftModal = false" style="position:fixed;inset:0;background:transparent;"></div>
-    <div style="position:relative;background:#fff;border-radius:16px;padding:28px 20px;max-width:360px;width:92%;text-align:center;z-index:1;">
-      <button @click="showGiftModal = false" style="position:absolute;top:10px;right:12px;background:none;border:none;font-size:22px;cursor:pointer;color:#888;">×</button>
+    <div class="popup-backdrop" @click="showGiftModal = false" style="position:fixed;inset:0;background:transparent;z-index:0;"></div>
+    <div style="position:relative;background:#fff;border-radius:16px;padding:28px 20px;max-width:360px;width:92%;text-align:center;z-index:10;box-shadow:0 4px 20px rgba(0,0,0,0.15);">
+      <button @click="showGiftModal = false" style="position:absolute;top:10px;right:12px;background:none;border:none;font-size:22px;cursor:pointer;color:#888;padding:0 8px;">×</button>
       <h3 style="font-family:'Taviraj',sans-serif;color:#6d583d;margin-bottom:6px;font-size:18px;">Gửi Quà Mừng Cưới</h3>
-      <p style="font-size:12px;color:#888;margin-bottom:16px;">Cảm ơn tấm lòng thương yêu của bạn!</p>
+      <p style="font-size:12px;color:#888;margin-bottom:6px;">Cảm ơn tấm lòng thương yêu của bạn!</p>
+      <p style="font-size:11px;color:#d9534f;margin-bottom:16px;animation: pulse 1.5s infinite;">(Nhấn vào ảnh để phóng to)</p>
+      
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
         <div>
-          <img :src="brideQr" alt="QR Cô Dâu Thùy Dung" style="width:100%;border-radius:8px;border:2px solid #e5e7eb;">
+          <div class="qr-zoom-container" @click.stop="openZoom(brideQr)">
+            <img :src="brideQr" alt="QR Cô Dâu Thùy Dung" class="qr-zoom-img">
+          </div>
           <p style="font-size:12px;color:#6d583d;margin-top:6px;font-family:'Taviraj',sans-serif;font-weight:bold;">Cô Dâu (Thùy Dung)</p>
         </div>
         <div>
-          <img :src="groomQr" alt="QR Chú Rể Bá Nam" style="width:100%;border-radius:8px;border:2px solid #e5e7eb;">
+          <div class="qr-zoom-container" @click.stop="openZoom(groomQr)">
+            <img :src="groomQr" alt="QR Chú Rể Bá Nam" class="qr-zoom-img">
+          </div>
           <p style="font-size:12px;color:#6d583d;margin-top:6px;font-family:'Taviraj',sans-serif;font-weight:bold;">Chú Rể (Bá Nam)</p>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- Zoomed QR Modal -->
+  <div v-if="zoomedQr" class="com-popup popup-center" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:1000005;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.8);">
+    <div class="popup-backdrop" @click="zoomedQr = null" style="position:fixed;inset:0;background:transparent;cursor:zoom-out;z-index:0;"></div>
+    <div style="position:relative;max-width:90%;max-height:90%;z-index:10;">
+      <img :src="zoomedQr" alt="Zoomed QR" style="max-width:100%;max-height:85vh;border-radius:12px;border:4px solid #fff;box-shadow:0 4px 30px rgba(0,0,0,0.5);">
+      <button @click="zoomedQr = null" style="position:absolute;top:-15px;right:-15px;background:#fff;border:none;font-size:24px;cursor:pointer;color:#000;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,0.3);">×</button>
+    </div>
+  </div>
 </template>
+
+<style scoped>
+@keyframes pulse {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.02); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.qr-zoom-container {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+  overflow: hidden;
+  cursor: pointer;
+  background: #fff;
+  position: relative;
+}
+.qr-zoom-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.qr-zoom-container:hover .qr-zoom-img {
+  transform: scale(1.05);
+}
+</style>
