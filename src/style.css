@@ -1,0 +1,13 @@
+/* Wedding Site - Sử dụng webcake CSS gốc */
+/* Tailwind đã bị xóa - thay bằng CSS gốc từ eWedding platform */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  /* Body style từ webcake-styles.css */
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trang & Giang - Wedding</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://api.webcake.io/animate/animatev4.css?v=1">
+  <link rel="stylesheet" href="https://api.webcake.io/render_iconfont/iconfont.css?v=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900|Taviraj:100,300,400,700,900|Dancing%20Script:100,300,400,700,900&display=swap">
+  
+  <style type="text/css">
+    /* Core Layout Styles for Animated Entry Gate */
+    .gate-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      z-index: 9999;
+      overflow: hidden;
+    }
+    .gate-wing {
+      position: absolute;
+      top: 0; width: 50%; height: 100%;
+      background-size: cover;
+      transition: transform 3.0s cubic-bezier(0.60, 0.50, 0.45, 1);
+    }
+    .left-wing {
+      left: 0; width: 65%;
+      background-image: url('https://statics.pancake.vn/web-media/6c/e1/93/76/f45d539757d91d0ce0c9476a9cf7307766321a70803b296fd4b970fd-w:1080-h:1920-l:2041770-t:image/png.png');
+      transform: translateX(0%);
+      z-index: 1;
+    }
+    .right-wing {
+      right: 0; width: 50%;
+      background-image: url('https://statics.pancake.vn/web-media/58/4c/24/bf/63c9c5e1792d6196c8ac3d5f9ba47d083fb0365a33da2a8f46500223-w:1080-h:1920-l:2114080-t:image/png.png');
+      transform: translateX(0%);
+      z-index: 10;
+    }
+    .gate-overlay.open .left-wing { transform: translateX(-100%); }
+    .gate-overlay.open .right-wing { transform: translateX(100%); }
+
+    /* Custom Floating Audio disc button fixed layout */
+    .music-icon {
+      position: fixed;
+      bottom: 20px; left: 20px;
+      width: 50px; height: 50px;
+      cursor: pointer;
+      z-index: 1000;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+    .music-icon.playing img {
+      animation: spin 5s linear infinite;
+    }
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Audio Controls and Element -->
+  <audio id="myAudio" src="https://statics.pancake.vn/web-media/c4/68/33/61/e5451e6a75e2c8b4be6bde3f935a05ee7f7f42e98e508107d8c4f8db-w:0-h:0-l:8859163-t:audio/mpeg.mp3" preload="auto" loop></audio>
+  
+  <div id="musicIcon" class="music-icon playing">
+    <img id="iconImage" src="https://statics.pancake.vn/web-media/56/4c/0f/77/eb1d93899f7058a0b85f4dfdeb51e6fee3dd2aab31ab7c0870264160-w:512-h:512-l:19624-t:image/png.png" alt="Phát Nhạc">
+    <div class="slash-line"></div>
+  </div>
+
+  <!-- Animated Entry Gate -->
+  <div id="loading-gate" class="gate-overlay">
+    <div class="gate-wing left-wing"></div>
+    <div class="gate-wing right-wing"></div>
+  </div>
+
+  <!-- Main Webcake Dynamic Container -->
+  <div id="webcake-render-root">
+    
+    <!-- Hero Header Details Section -->
+    <header class="section-hero">
+      <h1>NGUYỄN TRANG & ĐỨC GIANG</h1>
+      <h2>The big day: 29.03.2026</h2>
+      <p>"The story of us has been unfolding for years... now it's time to write our happily ever after."</p>
+    </header>
+
+    <!-- Invitation Detail Venues -->
+    <section class="section-invitation">
+      <h3>Thân mời bạn đến DỰ TIỆC chung vui cùng gia đình trong ngày hạnh phúc của chúng tôi</h3>
+      
+      <!-- Bride Party (Nhà Gái) -->
+      <div class="venue-card">
+        <h4>Nhà Gái</h4>
+        <p>Phụ mẫu: Ông Nguyễn Văn Hạnh & Bà Mai Thị Xuyến</p>
+        <p>Thời gian: 10:00, CHỦ NHẬT (29/03/2026)</p>
+        <p>Địa điểm: Phố Bùi Chu, Xã Xuân Trường, Tỉnh Ninh Bình</p>
+        <a href="https://maps.app.goo.gl/QJcR6GVdq5zEAr3j7" target="_blank">Chỉ đường</a>
+      </div>
+
+      <!-- Groom Party (Nhà Trai) -->
+      <div class="venue-card">
+        <h4>Nhà Trai</h4>
+        <p>Phụ mẫu: Ông Lê Văn Hội & Bà Trần Thị Tỉnh</p>
+        <p>Thời gian: 13:30, CHỦ NHẬT (29/03/2026)</p>
+        <p>Địa điểm: Xóm 10, Thọ Nghiệp, Xã Xuân Hưng, Tỉnh Ninh Bình</p>
+        <a href="https://maps.app.goo.gl/eedrf2gAmYfsT5Zr7" target="_blank">Chỉ đường</a>
+      </div>
+    </section>
+
+    <!-- Couple Details Section -->
+    <section class="section-couple">
+      <div class="bride-details">
+        <h3>Cô dâu: NGUYỄN TRANG</h3>
+      </div>
+      <div class="groom-details">
+        <h3>Chú rể: ĐỨC GIANG</h3>
+      </div>
+    </section>
+
+    <!-- Interactive Love Album Section (Backgrounds Defined Inline / Stylesheet) -->
+    <section class="section-gallery">
+      <h3>Album of Love</h3>
+      <div class="gallery-container">
+        <div class="gallery-view-item" data-index="0"></div>
+        <div class="gallery-view-item" data-index="1"></div>
+        <div class="gallery-view-item" data-index="2"></div>
+        <div class="gallery-view-item" data-index="3"></div>
+        <div class="gallery-view-item" data-index="4"></div>
+      </div>
+    </section>
+
+    <!-- Countdown Timer -->
+    <section class="section-countdown">
+      <h3>Countdown</h3>
+      <div class="timer-display" data-endtime="2026-03-29T10:00:00"></div>
+    </section>
+
+    <!-- Attendance RSVP Form -->
+    <section class="section-rsvp">
+      <h3>Gửi lời chúc & Xác nhận tham dự</h3>
+      <form id="npnmha4s">
+        <input type="text" name="full_name" placeholder="Tên của bạn là gì ?" required>
+        <input type="text" name="bancuadaure" placeholder="Bạn là khách mời của ai ?">
+        <select name="ban_se_tham_du_chu">
+          <option value="yes">Có, chắc chắn tôi sẽ đến</option>
+          <option value="no">Xin lỗi, tôi bận mất rồi</option>
+        </select>
+        <textarea name="guiloichuc" placeholder="Gửi lời chúc đến Dâu Rể nhé!"></textarea>
+        <button type="submit">GỬI LỜI CHÚC & XÁC NHẬN</button>
+      </form>
+      
+      <!-- Gift Button -->
+      <button id="gift-btn">GỬI QUÀ MỪNG CƯỚI</button>
+    </section>
+
+  </div>
+
+  <!-- Injected Core Layout and Autoplay Audio Engine Scripts -->
+  <script type="text/javascript" src="/webcake/v4/d7109c20-e72b-43c8-a282-4dd1c465251a"></script>
+  <script type="text/javascript">
+    window.addEventListener('load', function() {
+        const audio = document.getElementById('myAudio');
+        const musicIcon = document.getElementById('musicIcon');
+        if (!audio || !musicIcon) return;
+
+        let isPlaying = false;
+        let musicStarted = false;
+
+        function startMusic() {
+            if (musicStarted) return;
+            musicStarted = true;
+            audio.play().then(() => {
+                isPlaying = true;
+                musicIcon.classList.add('playing');
+                musicIcon.classList.remove('paused');
+            }).catch(err => {
+                console.log("Autoplay blocked:", err);
+            });
+        }
+
+        musicIcon.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (isPlaying) {
+                audio.pause();
+                isPlaying = false;
+                musicIcon.classList.remove('playing');
+                musicIcon.classList.add('paused');
+            } else {
+                audio.play().then(() => {
+                    isPlaying = true;
+                    musicIcon.classList.add('playing');
+                    musicIcon.classList.remove('paused');
+                });
+            }
+        });
+
+        ['scroll', 'touchstart', 'touchmove', 'wheel'].forEach(evt => {
+            window.addEventListener(evt, startMusic, { once: true });
+        });
+
+        // Gate opening routine
+        var gate = document.getElementById('loading-gate');
+        if (gate) {
+            setTimeout(function() {
+                gate.classList.add('open');
+            }, 700);
+        }
+    });
+  </script>
+</body>
+</html>
