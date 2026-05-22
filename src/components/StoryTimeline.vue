@@ -1,9 +1,9 @@
 <!-- Section 2: w-vd7mc3fa — Save The Date (842px) -->
 <!-- Exact HTML from original-updated.html, images load from CDN via CSS #w-* rules -->
 <script setup>
-import gallery1 from '../assets/images/gallery-1.jpg'
-import gallery2 from '../assets/images/gallery-2.jpg'
-import thankYouBg from '../assets/images/thank-you-bg.png'
+import gallery1 from '../assets/images/gallery-1.webp'
+import gallery2 from '../assets/images/gallery-2.webp'
+import thankYouBg from '../assets/images/thank-you-bg.webp'
 </script>
 
 <template>
@@ -64,7 +64,7 @@ import thankYouBg from '../assets/images/thank-you-bg.png'
           </div>
         </div>
 
-        <!-- Polaroid photo 1 (left, rotated) — gallery-1.jpg -->
+        <!-- Polaroid photo 1 (left, rotated) — gallery-1.webp -->
         <div id="w-l6nufaq3" class="com-image-block p-absolute is-animation">
           <div class="full-width full-height">
             <div class="image-block-css p-relative full-width full-height full-mask-size mask-position">
@@ -85,7 +85,7 @@ import thankYouBg from '../assets/images/thank-you-bg.png'
           </div>
         </div>
 
-        <!-- Polaroid photo 2 (right, rotated) — gallery-2.jpg -->
+        <!-- Polaroid photo 2 (right, rotated) — gallery-2.webp -->
         <div id="w-y4tq64wq" class="com-image-block p-absolute is-animation">
           <div class="full-width full-height">
             <div class="image-block-css p-relative full-width full-height full-mask-size mask-position">

@@ -4,17 +4,17 @@ import { computed, onMounted, onUnmounted, ref } from 'vue'
 import axios from 'axios'
 
 // --- Local gallery images ---
-import gallery5 from '../assets/images/gallery-5.jpg'
-import gallery6 from '../assets/images/gallery-6.jpg'
-import gallery0 from '../assets/images/gallery-0.jpg'
-import gallery1 from '../assets/images/gallery-1.jpg'
-import gallery2 from '../assets/images/gallery-2.jpg'
-import gallery3 from '../assets/images/gallery-3.jpg'
-import gallery4 from '../assets/images/gallery-4.jpg'
+import gallery5 from '../assets/images/gallery-5.webp'
+import gallery6 from '../assets/images/gallery-6.webp'
+import gallery0 from '../assets/images/gallery-0.webp'
+import gallery1 from '../assets/images/gallery-1.webp'
+import gallery2 from '../assets/images/gallery-2.webp'
+import gallery3 from '../assets/images/gallery-3.webp'
+import gallery4 from '../assets/images/gallery-4.webp'
 
 // --- QR Images ---
-import brideQr from '../assets/images/qr-cd.jpg'
-import groomQr from '../assets/images/qr-cr.png'
+import brideQr from '../assets/images/qr-cd.webp'
+import groomQr from '../assets/images/qr-cr.webp'
 
 // === GALLERY ===
 const images = [gallery5, gallery6, gallery0, gallery1, gallery2, gallery3, gallery4]
@@ -159,12 +159,12 @@ onUnmounted(() => {
 
               <!-- Next arrow -->
               <div class="gallery-view-icon-next" @click="nextSlide">
-                <img src="https://content.pancake.vn/1/d8/88/b5/1f/ce7bea1db3f2c535a89a2c99988aeba8d3a361b2c72c9d08950d10e7.svg" alt="navigation">
+                <img loading="lazy" src="https://content.pancake.vn/1/d8/88/b5/1f/ce7bea1db3f2c535a89a2c99988aeba8d3a361b2c72c9d08950d10e7.svg" alt="navigation">
                 <div class="icon-next"></div>
               </div>
               <!-- Prev arrow -->
               <div class="gallery-view-icon-prev" @click="prevSlide">
-                <img src="https://content.pancake.vn/1/31/23/51/e5/41806a12b05813bfc36f3ad3d1a580aa060a9d8f1736cc38e197a61f.svg" alt="navigation">
+                <img loading="lazy" src="https://content.pancake.vn/1/31/23/51/e5/41806a12b05813bfc36f3ad3d1a580aa060a9d8f1736cc38e197a61f.svg" alt="navigation">
                 <div class="icon-prev"></div>
               </div>
             </div>
@@ -185,11 +185,11 @@ onUnmounted(() => {
                 </div>
               </div>
               <div class="gallery-controls-icon-next" @click="nextSlide">
-                <img src="https://content.pancake.vn/1/d8/88/b5/1f/ce7bea1db3f2c535a89a2c99988aeba8d3a361b2c72c9d08950d10e7.svg" alt="navigation">
+                <img loading="lazy" src="https://content.pancake.vn/1/d8/88/b5/1f/ce7bea1db3f2c535a89a2c99988aeba8d3a361b2c72c9d08950d10e7.svg" alt="navigation">
                 <div class="control-next"></div>
               </div>
               <div class="gallery-controls-icon-prev" @click="prevSlide">
-                <img src="https://content.pancake.vn/1/31/23/51/e5/41806a12b05813bfc36f3ad3d1a580aa060a9d8f1736cc38e197a61f.svg" alt="navigation">
+                <img loading="lazy" src="https://content.pancake.vn/1/31/23/51/e5/41806a12b05813bfc36f3ad3d1a580aa060a9d8f1736cc38e197a61f.svg" alt="navigation">
                 <div class="control-prev"></div>
               </div>
             </div>
@@ -366,13 +366,13 @@ onUnmounted(() => {
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
         <div>
           <div class="qr-zoom-container" @click.stop="openZoom(brideQr)">
-            <img :src="brideQr" alt="QR Cô Dâu Thùy Dung" class="qr-zoom-img">
+            <img loading="lazy" :src="brideQr" alt="QR Cô Dâu Thùy Dung" class="qr-zoom-img">
           </div>
           <p style="font-size:12px;color:#6d583d;margin-top:6px;font-family:'Taviraj',sans-serif;font-weight:bold;">Cô Dâu (Thùy Dung)</p>
         </div>
         <div>
           <div class="qr-zoom-container" @click.stop="openZoom(groomQr)">
-            <img :src="groomQr" alt="QR Chú Rể Bá Nam" class="qr-zoom-img">
+            <img loading="lazy" :src="groomQr" alt="QR Chú Rể Bá Nam" class="qr-zoom-img">
           </div>
           <p style="font-size:12px;color:#6d583d;margin-top:6px;font-family:'Taviraj',sans-serif;font-weight:bold;">Chú Rể (Bá Nam)</p>
         </div>
@@ -384,7 +384,7 @@ onUnmounted(() => {
   <div v-if="zoomedQr" class="com-popup popup-center" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:1000005;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.8);">
     <div class="popup-backdrop" @click="zoomedQr = null" style="position:fixed;inset:0;background:transparent;cursor:zoom-out;z-index:0;"></div>
     <div style="position:relative;max-width:90%;max-height:90%;z-index:10;">
-      <img :src="zoomedQr" alt="Zoomed QR" style="max-width:100%;max-height:85vh;border-radius:12px;border:4px solid #fff;box-shadow:0 4px 30px rgba(0,0,0,0.5);">
+      <img loading="lazy" :src="zoomedQr" alt="Zoomed QR" style="max-width:100%;max-height:85vh;border-radius:12px;border:4px solid #fff;box-shadow:0 4px 30px rgba(0,0,0,0.5);">
       <button @click="zoomedQr = null" style="position:absolute;top:-15px;right:-15px;background:#fff;border:none;font-size:24px;cursor:pointer;color:#000;border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 10px rgba(0,0,0,0.3);">×</button>
     </div>
   </div>

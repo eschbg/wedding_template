@@ -1,9 +1,9 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
-import gateLeft from '../assets/images/gate-left.png'
-import gateRight from '../assets/images/gate-right.png'
+import gateLeft from '../assets/images/gate-left.webp'
+import gateRight from '../assets/images/gate-right.webp'
 import audioSrc from '../assets/audio/background-music.mp3'
-import musicDisc from '../assets/images/music-disc.png'
+import musicDisc from '../assets/images/music-disc.webp'
 
 // --- Gate Animation ---
 const gateRef = ref(null)
@@ -66,7 +66,7 @@ onUnmounted(() => {
     @click="toggleAudio"
     aria-label="Phát hoặc tạm dừng nhạc nền"
   >
-    <img :src="musicDisc" alt="Music Disc">
+    <img loading="lazy" :src="musicDisc" alt="Music Disc">
     <span v-if="!playing" class="slash-line" aria-hidden="true"></span>
   </button>
   <audio ref="audioRef" :src="audioSrc" preload="auto" loop></audio>
