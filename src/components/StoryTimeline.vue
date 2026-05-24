@@ -33,14 +33,6 @@ import thankYouBg from '../assets/images/thank-you-bg.webp'
           </div>
         </div>
 
-        <!-- Story quote -->
-        <div id="w-bc4iups4" class="com-text-block p-absolute is-animation">
-          <div class="text-block">
-            <h1 class="text-block-css full-width">The story of us has been unfolding for years... now it's time to
-              write our happily ever after<br></h1>
-          </div>
-        </div>
-
         <!-- Divider line -->
         <div id="w-qa4iudj9" class="p-absolute">
           <div class="full-width full-height">
