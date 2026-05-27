@@ -104,9 +104,9 @@ import thankYouBg from '../assets/images/thank-you-bg.webp'
         </div>
 
         <!-- "D" initial — KD-Aureligena font (Cursive overlay) -->
-        <div id="w-06fskfrb" class="com-text-block p-absolute is-animation">
+        <div id="w-06fskfrb" class="com-text-block p-absolute is-animation" style="top: 52px !important; left: 145px !important;">
           <div class="text-block">
-            <h2 class="text-block-css full-width">D</h2>
+            <h2 class="text-block-css full-width" style="font-family: 'FzQuagera.ttf', sans-serif !important; font-weight: normal !important; font-size: 64px !important;">D</h2>
           </div>
         </div>
 

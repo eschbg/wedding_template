@@ -2122,8 +2122,8 @@
     }
 
     #w-06fskfrb {
-      top: 44.0572624206543px;
-      left: 145.01376342773438px;
+      top: 44.0572624206543px !important;
+      left: 145.01376342773438px !important;
       width: 128px;
       height: 88.48958587646484px;
     }
@@ -2136,15 +2136,16 @@
       border-color: rgba(229, 231, 235, 1);
       border-style: solid;
       color: rgba(109, 88, 61, 1.000);
-      font-family: 'KD-Aureligena-Script.ttf', sans-serif;
-      font-size: 59px;
+      font-family: 'KD-Aureligena-Script.ttf', sans-serif !important;
+      font-size: 59px !important;
+      font-weight: normal !important;
       text-align: center;
       --type: 0;
     }
 
     #w-whvexl1r {
-      top: 32.07810592651367px;
-      left: 130.01376342773438px;
+      top: 32.07810592651367px !important;
+      left: 130.01376342773438px !important;
       width: 128px;
       height: 90.00000762939453px;
     }
@@ -2158,8 +2159,8 @@
       border-style: solid;
       color: rgba(109, 88, 61, 1.000);
       font-family: 'FzQuagera.ttf', sans-serif;
-      font-size: 60px;
-      font-weight: bold;
+      font-size: 54px;
+      font-weight: normal;
       text-align: center;
       --type: 0;
     }
@@ -2234,17 +2235,17 @@
     }
 
     #w-gxbfjkvj {
-      top: 626.5px;
+      top: 630px !important;
       left: 47.5px;
       width: 325px;
-      height: 166px;
+      height: auto !important;
     }
 
     #w-cczryo41 {
       top: 0px;
       left: 0px;
       width: 325px;
-      height: 165.62501525878906px;
+      height: auto !important;
     }
 
     #w-cczryo41 .text-block {
@@ -2254,11 +2255,16 @@
     #w-cczryo41 .text-block-css {
       border-color: rgba(229, 231, 235, 1);
       border-style: solid;
-      color: rgba(109, 88, 61, 1.000);
-      font-family: 'Taviraj', sans-serif;
-      font-size: 36px;
-      line-height: 2.3;
+      color: #cc0000 !important;
+      font-family: 'KD-Aureligena-Script.ttf', sans-serif !important;
+      font-size: 78px !important;
+      font-weight: normal !important;
+      line-height: 0.8 !important;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
       --type: 0;
     }
 
@@ -2274,15 +2280,7 @@
     }
 
     #w-shmq88mr .text-block-css {
-      -webkit-text-stroke: 0px rgba(0, 0, 0, 1);
-      border-color: rgba(229, 231, 235, 1);
-      border-style: solid;
-      color: rgba(109, 88, 61, 1.000);
-      font-family: 'n11.ttf', sans-serif;
-      font-size: 35px;
-      line-height: 1.6;
-      text-align: center;
-      --type: 0;
+      display: none !important;
     }
 
     #w-mnq7gg2y {
@@ -5028,14 +5026,14 @@
     }
 
     #w-06fskfrb.animation .text-block-css {
-      animation-name: slideInUp;
-      -webkit-animation-name: slideInUp;
-      animation-delay: 0s;
-      -webkit-animation-delay: 0s;
-      animation-iteration-count: 1;
-      -webkit-animation-iteration-count: 1;
-      animation-duration: 1s;
-      -webkit-animation-duration: 1s;
+      border-color: rgba(229, 231, 235, 1);
+      border-style: solid;
+      color: rgba(109, 88, 61, 1.000);
+      font-family: 'KD-Aureligena-Script.ttf', sans-serif !important;
+      font-size: 59px !important;
+      font-weight: normal !important;
+      text-align: center;
+      --type: 0;
     }
 
     #w-whvexl1r.animation {
@@ -6128,8 +6126,8 @@
     }
 
     #w-06fskfrb {
-      top: 44.0572624206543px;
-      left: 145.01376342773438px;
+      top: 44.0572624206543px !important;
+      left: 145.01376342773438px !important;
       width: 128px;
       height: 88.48958587646484px;
     }
@@ -6142,15 +6140,16 @@
       border-color: rgba(229, 231, 235, 1);
       border-style: solid;
       color: rgba(109, 88, 61, 1.000);
-      font-family: 'KD-Aureligena-Script.ttf', sans-serif;
-      font-size: 59px;
+      font-family: 'KD-Aureligena-Script.ttf', sans-serif !important;
+      font-size: 59px !important;
+      font-weight: normal !important;
       text-align: center;
       --type: 0;
     }
 
     #w-whvexl1r {
-      top: 32.07810592651367px;
-      left: 130.01376342773438px;
+      top: 32.07810592651367px !important;
+      left: 130.01376342773438px !important;
       width: 128px;
       height: 90.00000762939453px;
     }
@@ -6240,17 +6239,17 @@
     }
 
     #w-gxbfjkvj {
-      top: 626.5px;
+      top: 630px !important;
       left: 47.5px;
       width: 325px;
-      height: 166px;
+      height: auto !important;
     }
 
     #w-cczryo41 {
       top: 0px;
       left: 0px;
       width: 325px;
-      height: 165.62501525878906px;
+      height: auto !important;
     }
 
     #w-cczryo41 .text-block {
@@ -6260,11 +6259,16 @@
     #w-cczryo41 .text-block-css {
       border-color: rgba(229, 231, 235, 1);
       border-style: solid;
-      color: rgba(109, 88, 61, 1.000);
-      font-family: 'Taviraj', sans-serif;
-      font-size: 36px;
-      line-height: 2.3;
+      color: #cc0000 !important;
+      font-family: 'KD-Aureligena-Script.ttf', sans-serif !important;
+      font-size: 78px !important;
+      font-weight: normal !important;
+      line-height: 0.8 !important;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
       --type: 0;
     }
 
@@ -6280,15 +6284,7 @@
     }
 
     #w-shmq88mr .text-block-css {
-      -webkit-text-stroke: 0px rgba(0, 0, 0, 1);
-      border-color: rgba(229, 231, 235, 1);
-      border-style: solid;
-      color: rgba(109, 88, 61, 1.000);
-      font-family: 'n11.ttf', sans-serif;
-      font-size: 35px;
-      line-height: 1.6;
-      text-align: center;
-      --type: 0;
+      display: none !important;
     }
 
     #w-mnq7gg2y {
@@ -9034,14 +9030,14 @@
     }
 
     #w-06fskfrb.animation .text-block-css {
-      animation-name: slideInUp;
-      -webkit-animation-name: slideInUp;
-      animation-delay: 0s;
-      -webkit-animation-delay: 0s;
-      animation-iteration-count: 1;
-      -webkit-animation-iteration-count: 1;
-      animation-duration: 1s;
-      -webkit-animation-duration: 1s;
+      border-color: rgba(229, 231, 235, 1);
+      border-style: solid;
+      color: rgba(109, 88, 61, 1.000);
+      font-family: 'KD-Aureligena-Script.ttf', sans-serif !important;
+      font-size: 59px !important;
+      font-weight: normal !important;
+      text-align: center;
+      --type: 0;
     }
 
     #w-whvexl1r.animation {
@@ -9665,3 +9661,28 @@
     }
   
 
+
+
+/* Custom font overrides for names */
+#w-4onqz968 .text-block-css,
+#w-cczryo41 .text-block-css,
+#w-xp30b5wi .text-block-css,
+#w-60gs9iiz .text-block-css,
+#w-jojizcdn .text-block-css {
+  font-family: 'Great Vibes', cursive !important;
+  font-size: 150% !important;
+  text-transform: capitalize !important;
+}
+
+
+/* Apply font of N to D */
+#w-06fskfrb .text-block-css {
+      border-color: rgba(229, 231, 235, 1);
+      border-style: solid;
+      color: rgba(109, 88, 61, 1.000);
+      font-family: 'KD-Aureligena-Script.ttf', sans-serif !important;
+      font-size: 59px !important;
+      font-weight: normal !important;
+      text-align: center;
+      --type: 0;
+    }
