@@ -11,13 +11,20 @@ import gallery1 from '../assets/images/gallery-1.webp'
 import gallery2 from '../assets/images/gallery-2.webp'
 import gallery3 from '../assets/images/gallery-3.webp'
 import gallery4 from '../assets/images/gallery-4.webp'
+import gallery7 from '../assets/images/gallery-7.webp'
+import gallery8 from '../assets/images/gallery-8.webp'
+import gallery9 from '../assets/images/gallery-9.webp'
+import gallery10 from '../assets/images/gallery-10.webp'
+import gallery11 from '../assets/images/gallery-11.webp'
+import gallery12 from '../assets/images/gallery-12.webp'
+
 
 // --- QR Images ---
 import brideQr from '../assets/images/qr-cd.webp'
 import groomQr from '../assets/images/qr-cr.webp'
 
 // === GALLERY ===
-const images = [gallery5, gallery6, gallery0, gallery1, gallery2, gallery3, gallery4]
+const images = [gallery5, gallery6, gallery7, gallery8, gallery9, gallery0, gallery1, gallery2, gallery3, gallery4, gallery10, gallery11, gallery12]
 const currentIndex = ref(0)
 let galleryInterval
 
