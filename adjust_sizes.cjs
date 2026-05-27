@@ -16,7 +16,7 @@ function applyTo(file) {
       color: rgba(109, 88, 61, 1.000);
       font-family: 'KD-Aureligena-Script.ttf', sans-serif !important;
       font-size: 78px !important;
-      font-weight: normal !important;
+      font-weight: 450 !important;
       line-height: 1.0 !important;
       text-align: center;
       --type: 0;
