@@ -11,3 +11,140 @@ body {
   background-color: #fff;
   /* Body style từ webcake-styles.css */
 }
+
+/* Fix viền trắng xung quanh ảnh polaroid */
+/* Nguyên nhân: .image-background có margin: 0 auto nhưng width < container */
+#w-l6nufaq3 .image-block-css,
+#w-y4tq64wq .image-block-css {
+  overflow: hidden !important;
+  background: transparent !important;
+}
+
+#w-l6nufaq3 .image-background,
+#w-y4tq64wq .image-background {
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+  margin: 0 !important;
+}
+
+/* ===== Ẩn tất cả ảnh hoa trang trí background ===== */
+#w-dqspv7ax,
+#w-8ay25ugn,
+#w-dbdlwytj,
+#w-4f001elj,
+#w-fzfk974a,
+#w-vnqw8o3l,
+#w-7otz6ju6,
+#w-8ohqe5pu,
+#w-b5k3rojd,
+#w-gxik85a6,
+#w-68to3546,
+#w-55ii3oy2,
+#w-yc4o8wq1,
+#w-xnhxst1e {
+  display: none !important;
+}
+
+/* ===== Căn giữa "ALBUM of LOVE" ===== */
+#w-kpdm3hjm {
+  left: 59.75px !important;
+}
+#w-twb2y15g {
+  left: 134.75px !important;
+}
+#w-gvinnq2p {
+  left: 181.25px !important;
+}
+
+/* ===== WE ARE GETTING MARRIED - 1 dòng ===== */
+#w-2je4g75n {
+  left: 0 !important;
+  width: 420px !important;
+  white-space: nowrap !important;
+}
+#w-2je4g75n .text-block-css {
+  font-size: 17px !important;
+  text-align: center !important;
+  letter-spacing: 1px !important;
+}
+
+/* ===== Tighten vertical spacing for mobile invitation flow ===== */
+#w-vd7mc3fa {
+  height: 782px !important;
+}
+
+#w-2bs8c2lb {
+  height: 910px !important;
+}
+
+#w-ni46w1zd,
+#w-rz9ziudp {
+  top: 26px !important;
+}
+
+#w-1mjh5x89,
+#w-0qz9dtcz {
+  top: 96px !important;
+}
+
+#w-979kjzgs {
+  top: 180px !important;
+}
+
+#w-u54yshpb {
+  top: 206px !important;
+}
+
+#w-735c7if3 {
+  top: 254px !important;
+}
+
+#w-j6qupiur {
+  top: 230px !important;
+}
+
+#w-mnq7gg2y {
+  top: 366px !important;
+}
+
+#w-bucmot5e {
+  top: 398px !important;
+}
+
+#w-8p2no3p3 {
+  top: 426px !important;
+}
+
+#w-7qyzakqq {
+  top: 470px !important;
+}
+
+#w-489q168n {
+  top: 526px !important;
+}
+
+#w-hhef3z1p {
+  top: 550px !important;
+}
+
+#w-9r1np7f9 {
+  top: 574px !important;
+}
+
+#w-0sgx4h10 {
+  top: 674px !important;
+}
+
+#w-u5974ugb {
+  top: 704px !important;
+}
+
+#w-fy3iaj6k {
+  top: 732px !important;
+}
+
+#w-9xkpyyyd {
+  top: 794px !important;
+}

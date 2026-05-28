@@ -8,9 +8,7 @@
         <!-- Invitation headline -->
         <div id="w-979kjzgs" class="com-text-block p-absolute is-animation">
           <div class="text-block">
-            <h1 class="text-block-css full-width">
-              TỚI DỰ BỮA CƠM THÂN MẬT MỪNG LỄ VU QUY CÙNG GIA ĐÌNH CHÚNG TÔI<br />
-            </h1>
+            <h1 class="text-block-css full-width">TRÂN TRỌNG KÍNH MỜI<br /></h1>
           </div>
         </div>
 
@@ -20,27 +18,6 @@
             <h1 class="text-block-css full-width">
               vào lúc 11:00, THỨ NĂM<br />
             </h1>
-          </div>
-        </div>
-
-        <!-- Names group -->
-        <div
-          id="w-gxbfjkvj"
-          class="p-absolute is-animation group-auto-scroll sroll-size"
-        >
-          <div class="group-container">
-            <div id="w-cczryo41" class="com-text-block p-absolute">
-              <div class="text-block">
-                <h1 class="text-block-css full-width">
-                  <span style="line-height: 0.8;">Bá Nam</span><span style="font-size: 24px; line-height: 1.0; margin: -5px 0;">&amp;</span><span style="line-height: 0.8;">Thùy Dung</span>
-                </h1>
-              </div>
-            </div>
-            <div id="w-shmq88mr" class="com-text-block p-absolute">
-              <div class="text-block">
-                <h1 class="text-block-css full-width">and<br /></h1>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -110,20 +87,6 @@
               ></div>
               <div class="image-gradient-border"></div>
             </div>
-          </div>
-        </div>
-
-        <!-- Top couple photo -->
-        <div id="w-h6kw2mfd" class="com-image-block p-absolute">
-          <div
-            class="image-block-css p-relative full-width full-height full-mask-size mask-position"
-          >
-            <div
-              class="image-background p-absolute"
-              role="img"
-              aria-label="Ảnh đôi"
-            ></div>
-            <div class="image-gradient-border"></div>
           </div>
         </div>
 
@@ -283,7 +246,7 @@
         <div id="w-u54yshpb" class="com-text-block p-absolute">
           <div class="text-block">
             <h1 class="text-block-css full-width">
-              TIỆC THÂN MẬT ĐƯỢC TỔ CHỨC<br />
+              TỚI DỰ LỄ VU QUY ĐƯỢC TỔ CHỨC<br />
             </h1>
           </div>
         </div>

@@ -3,7 +3,6 @@
 <script setup>
 import gallery1 from "../assets/images/gallery-1.webp";
 import gallery2 from "../assets/images/gallery-2.webp";
-import thankYouBg from "../assets/images/thank-you-bg.webp";
 </script>
 
 <template>
@@ -37,7 +36,6 @@ import thankYouBg from "../assets/images/thank-you-bg.webp";
                 class="image-background p-absolute"
                 role="img"
                 aria-label=""
-                :style="{ backgroundImage: `url(${thankYouBg})` }"
               ></div>
               <div class="image-gradient-border"></div>
             </div>
@@ -66,7 +64,9 @@ import thankYouBg from "../assets/images/thank-you-bg.webp";
         <!-- Date -->
         <div id="w-2je4g75n" class="com-text-block p-absolute is-animation">
           <div class="text-block">
-            <h1 class="text-block-css full-width">06.06.2026<br /></h1>
+            <h1 class="text-block-css full-width">
+              WE ARE GETTING MARRIED<br />
+            </h1>
           </div>
         </div>
 
@@ -75,14 +75,15 @@ import thankYouBg from "../assets/images/thank-you-bg.webp";
           <div class="full-width full-height">
             <div
               class="image-block-css p-relative full-width full-height full-mask-size mask-position"
+              style="background-color: transparent !important; box-shadow: none !important; border: none !important;"
             >
               <div
                 class="image-background p-absolute"
                 role="img"
                 aria-label="Bá Nam & Thùy Dung"
-                :style="{ backgroundImage: `url(${gallery1})` }"
+                :style="{ backgroundImage: `url(${gallery1})`, width: '100% !important', height: '100% !important', top: '0', left: '0' }"
               ></div>
-              <div class="image-gradient-border"></div>
+              <div class="image-gradient-border" style="display: none !important;"></div>
             </div>
           </div>
         </div>
@@ -108,14 +109,15 @@ import thankYouBg from "../assets/images/thank-you-bg.webp";
           <div class="full-width full-height">
             <div
               class="image-block-css p-relative full-width full-height full-mask-size mask-position"
+              style="background-color: transparent !important; box-shadow: none !important; border: none !important;"
             >
               <div
                 class="image-background p-absolute"
                 role="img"
                 aria-label="Bá Nam & Thùy Dung"
-                :style="{ backgroundImage: `url(${gallery2})` }"
+                :style="{ backgroundImage: `url(${gallery2})`, width: '100% !important', height: '100% !important', top: '0', left: '0' }"
               ></div>
-              <div class="image-gradient-border"></div>
+              <div class="image-gradient-border" style="display: none !important;"></div>
             </div>
           </div>
         </div>

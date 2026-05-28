@@ -1989,9 +1989,9 @@
     }
 
     #w-l6nufaq3 .image-background {
-      width: 180.27645502645504px;
-      height: 279px;
-      top: -29px;
+      width: 197px;
+      height: 266px;
+      top: 0px;
       left: 0px;
       background: center center/ cover no-repeat scroll content-box border-box url("https://content.pancake.vn/1/s596x896/fwebp90/cb/f0/e5/4e/0cd0eca1c60fba0ac4808be2ddb9949f18d008f0a48e05b590d3131c-w:4024-h:6048-l:13697850-t:image/jpeg.jpg");
       --type: 0;
@@ -2059,9 +2059,9 @@
     }
 
     #w-y4tq64wq .image-background {
-      width: 181.24867724867727px;
-      height: 280.4612326043738px;
-      top: -17.46123260437376px;
+      width: 197px;
+      height: 266px;
+      top: 0px;
       left: 0px;
       background: center center/ cover no-repeat scroll content-box border-box url("https://content.pancake.vn/1/s597x898/fwebp90/a6/26/d2/71/8a86cbf3db66ba89c0c0cf9f4b7f5479c1b6b9af5d84a52a697678c1-w:4024-h:6048-l:13468349-t:image/jpeg.jpg");
       --type: 0;
@@ -3471,7 +3471,7 @@
     #w-gackq6hi .image-block-css {
       border-color: rgba(255, 255, 255, 1);
       border-style: solid;
-      border-width: 10px;
+      border-width: 0px;
       position: absolute;
       z-index: null;
     }
@@ -5993,9 +5993,9 @@
     }
 
     #w-l6nufaq3 .image-background {
-      width: 180.27645502645504px;
-      height: 279px;
-      top: -29px;
+      width: 197px;
+      height: 266px;
+      top: 0px;
       left: 0px;
       background: center center/ cover no-repeat scroll content-box border-box url("https://content.pancake.vn/1/s596x896/fwebp90/cb/f0/e5/4e/0cd0eca1c60fba0ac4808be2ddb9949f18d008f0a48e05b590d3131c-w:4024-h:6048-l:13697850-t:image/jpeg.jpg");
       --type: 0;
@@ -6063,9 +6063,9 @@
     }
 
     #w-y4tq64wq .image-background {
-      width: 181.24867724867727px;
-      height: 280.4612326043738px;
-      top: -17.46123260437376px;
+      width: 197px;
+      height: 266px;
+      top: 0px;
       left: 0px;
       background: center center/ cover no-repeat scroll content-box border-box url("https://content.pancake.vn/1/s597x898/fwebp90/a6/26/d2/71/8a86cbf3db66ba89c0c0cf9f4b7f5479c1b6b9af5d84a52a697678c1-w:4024-h:6048-l:13468349-t:image/jpeg.jpg");
       --type: 0;
@@ -7475,7 +7475,7 @@
     #w-gackq6hi .image-block-css {
       border-color: rgba(255, 255, 255, 1);
       border-style: solid;
-      border-width: 10px;
+      border-width: 0px;
       position: absolute;
       z-index: null;
     }
@@ -9686,3 +9686,14 @@
       text-align: center;
       --type: 0;
     }
+
+/* ===== Center ALBUM of LOVE heading ===== */
+#w-kpdm3hjm {
+  left: 59.75px !important;
+}
+#w-twb2y15g {
+  left: 134.75px !important;
+}
+#w-gvinnq2p {
+  left: 181.25px !important;
+}
