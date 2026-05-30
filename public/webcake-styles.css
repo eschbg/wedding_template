@@ -5027,6 +5027,14 @@
     }
 
     #w-06fskfrb.animation .text-block-css {
+      animation-name: slideInUp;
+      -webkit-animation-name: slideInUp;
+      animation-delay: 0s;
+      -webkit-animation-delay: 0s;
+      animation-iteration-count: 1;
+      -webkit-animation-iteration-count: 1;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
       border-color: rgba(229, 231, 235, 1);
       border-style: solid;
       color: rgba(109, 88, 61, 1.000);
@@ -9031,6 +9039,14 @@
     }
 
     #w-06fskfrb.animation .text-block-css {
+      animation-name: slideInUp;
+      -webkit-animation-name: slideInUp;
+      animation-delay: 0s;
+      -webkit-animation-delay: 0s;
+      animation-iteration-count: 1;
+      -webkit-animation-iteration-count: 1;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
       border-color: rgba(229, 231, 235, 1);
       border-style: solid;
       color: rgba(109, 88, 61, 1.000);
