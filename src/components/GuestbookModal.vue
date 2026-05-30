@@ -28,6 +28,7 @@
 <script setup>
 import { ref, watch, computed, onMounted, onUnmounted } from 'vue';
 import axios from 'axios';
+import Papa from 'papaparse';
 
 const props = defineProps({
   isOpen: {
@@ -47,13 +48,12 @@ const loading = ref(false);
 const error = ref(null);
 const isPaused = ref(false);
 
-const GOOGLE_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbybQ-g85SKegO0WAoLW_j5XTtEo61Z_AB_yw-YbvXQoRdu3L2gYFPS4HMhkN5ZoHO3F/exec";
+const GOOGLE_SHEET_CSV_URL =
+  "https://docs.google.com/spreadsheets/d/1qLyN6E3APjHWTShALFNqDBAlrF6Fz_2vxpDw0DcIS1A/export?format=csv&gid=0";
 
 // Duplicate messages to create infinite scroll effect if there are too few
 const duplicatedMessages = computed(() => {
   if (messages.value.length === 0) return [];
-  // If we have very few messages, duplicate them many times to fill the screen
   let dups = [...messages.value];
   while (dups.length < 20) {
     dups = dups.concat(messages.value);
@@ -61,35 +61,34 @@ const duplicatedMessages = computed(() => {
   return dups;
 });
 
-const fetchMessages = async () => {
+const fetchMessages = () => {
   loading.value = true;
   error.value = null;
-  try {
-    const response = await axios.get(GOOGLE_SCRIPT_URL);
-    if (response.data && response.data.status === 'success') {
-      messages.value = response.data.data
-        .filter((row) => row.wishContent && row.wishContent.trim() !== '')
-        .map((row) => ({
-          name: row.fullName || 'Khách',
-          wish: row.wishContent,
-        }))
-        .reverse();
-    } else {
-      throw new Error("API not returning correct format.");
+
+  Papa.parse(`${GOOGLE_SHEET_CSV_URL}&t=${Date.now()}`, {
+    download: true,
+    header: true,
+    complete: (results) => {
+      loading.value = false;
+      const data = results.data;
+      if (data && data.length > 0) {
+        messages.value = data
+          .filter((row) => row['Lời chúc'] && row['Lời chúc'].trim() !== '')
+          .map((row) => ({
+            name: row['Tên khách mời'] || 'Khách',
+            wish: row['Lời chúc'],
+          }))
+          .reverse();
+      } else {
+        messages.value = [];
+      }
+    },
+    error: (err) => {
+      console.error("Failed to fetch messages", err);
+      error.value = "Không thể tải lời chúc lúc này.";
+      loading.value = false;
     }
-  } catch (err) {
-    console.error("Failed to fetch messages", err);
-    // Fallback Dummy data
-    messages.value = [
-      { name: "Lan Anh", wish: "🕊️ Tân hôn hạnh phúc, trăm năm bên nhau!" },
-      { name: "Lan Anh", wish: "💍 Chúc cho tình yêu của hai bạn mỗi ngày một lớn mạnh!" },
-      { name: "Tùng", wish: "🕊️ Tân hôn hạnh phúc, trăm năm bên nhau!" },
-      { name: "Ngọc", wish: "💖 💖 Chúc hai bạn trăm năm hạnh phúc!" },
-      { name: "Erik", wish: "🕊️ Tân hôn hạnh phúc, trăm năm bên nhau!" },
-    ];
-  } finally {
-    loading.value = false;
-  }
+  });
 };
 
 watch(() => props.isOpen, (newVal) => {
@@ -111,7 +110,6 @@ onMounted(() => {
 onUnmounted(() => {
   clearInterval(intervalId);
 });
-
 </script>
 
 <style scoped>
