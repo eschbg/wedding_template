@@ -212,9 +212,8 @@ onUnmounted(() => {
 }
 
 @keyframes marquee-up {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-50%); } 
-  /* -50% assumes we duplicated content enough to loop seamlessly */
+  0% { transform: translateY(50%); }
+  100% { transform: translateY(0); } 
 }
 
 @keyframes pulse {
