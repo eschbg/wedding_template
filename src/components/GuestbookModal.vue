@@ -10,7 +10,7 @@
       <div v-else-if="messages.length === 0" class="empty-state">
         Chưa có lời chúc nào.
       </div>
-      <div v-else class="content-wrapper" :class="{ 'is-scrolling': shouldScroll }">
+      <div v-else class="content-wrapper" :class="{ 'is-scrolling': shouldScroll }" :style="{ animationDuration: scrollDuration + 's' }">
         <!-- Duplicate messages for infinite scroll effect -->
         <div
           v-for="(msg, index) in displayMessages"
@@ -53,16 +53,30 @@ const GOOGLE_SHEET_CSV_URL =
 
 const shouldScroll = computed(() => messages.value.length > 3);
 
-// Duplicate messages to create infinite scroll effect if there are too few
+const scrollDuration = computed(() => {
+  if (!shouldScroll.value) return 0;
+  // We calculate baseList length to keep speed constant (e.g. 3s per item)
+  let len = messages.value.length;
+  while (len < 10) {
+    len += messages.value.length;
+  }
+  return len * 3; 
+});
+
+// Create a perfect infinite loop by creating a base block that overflows,
+// and then duplicating that base block EXACTLY once.
 const displayMessages = computed(() => {
   if (messages.value.length === 0) return [];
   if (!shouldScroll.value) return messages.value;
   
-  let dups = [...messages.value];
-  while (dups.length < 20) {
-    dups = dups.concat(messages.value);
+  let baseList = [...messages.value];
+  // Ensure the base list is long enough to cover the viewport height (e.g. at least 10 items)
+  while (baseList.length < 10) {
+    baseList = baseList.concat(messages.value);
   }
-  return dups;
+  
+  // Duplicate exactly once for the translateY(-50%) CSS trick to work flawlessly
+  return [...baseList, ...baseList];
 });
 
 const fetchMessages = () => {
@@ -150,7 +164,9 @@ onUnmounted(() => {
 }
 
 .content-wrapper.is-scrolling {
-  animation: marquee-up 30s linear infinite;
+  animation-name: marquee-up;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .messages-wrapper.paused .content-wrapper.is-scrolling {
