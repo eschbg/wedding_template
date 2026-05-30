@@ -10,10 +10,10 @@
       <div v-else-if="messages.length === 0" class="empty-state">
         Chưa có lời chúc nào.
       </div>
-      <div v-else class="scrolling-content">
+      <div v-else class="content-wrapper" :class="{ 'is-scrolling': shouldScroll }">
         <!-- Duplicate messages for infinite scroll effect -->
         <div
-          v-for="(msg, index) in duplicatedMessages"
+          v-for="(msg, index) in displayMessages"
           :key="index"
           class="message-bubble"
         >
@@ -51,9 +51,13 @@ const isPaused = ref(false);
 const GOOGLE_SHEET_CSV_URL =
   "https://docs.google.com/spreadsheets/d/1qLyN6E3APjHWTShALFNqDBAlrF6Fz_2vxpDw0DcIS1A/export?format=csv&gid=0";
 
+const shouldScroll = computed(() => messages.value.length > 3);
+
 // Duplicate messages to create infinite scroll effect if there are too few
-const duplicatedMessages = computed(() => {
+const displayMessages = computed(() => {
   if (messages.value.length === 0) return [];
+  if (!shouldScroll.value) return messages.value;
+  
   let dups = [...messages.value];
   while (dups.length < 20) {
     dups = dups.concat(messages.value);
@@ -138,15 +142,18 @@ onUnmounted(() => {
   pointer-events: auto; /* Enable hover on messages */
 }
 
-.scrolling-content {
+.content-wrapper {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  animation: marquee-up 30s linear infinite;
   padding-bottom: 20px;
 }
 
-.messages-wrapper.paused .scrolling-content {
+.content-wrapper.is-scrolling {
+  animation: marquee-up 30s linear infinite;
+}
+
+.messages-wrapper.paused .content-wrapper.is-scrolling {
   animation-play-state: paused;
 }
 
