@@ -49,7 +49,7 @@
         <!-- Date -->
         <div id="w-jkdnlfq9" class="com-text-block p-absolute is-animation">
           <div class="text-block">
-            <h1 class="text-block-css full-width">06.06.2026<br></h1>
+            <h1 class="text-block-css full-width">WE ARE GETTING MARRIED<br></h1>
           </div>
         </div>
 

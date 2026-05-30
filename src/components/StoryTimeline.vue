@@ -65,7 +65,7 @@ import gallery2 from "../assets/images/gallery-2.webp";
         <div id="w-2je4g75n" class="com-text-block p-absolute is-animation">
           <div class="text-block">
             <h1 class="text-block-css full-width">
-              WE ARE GETTING MARRIED<br />
+              06.06.2026<br />
             </h1>
           </div>
         </div>
