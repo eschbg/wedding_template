@@ -1,4 +1,5 @@
 <script setup>
+import { onMounted } from 'vue'
 import FloatingAudio from './components/FloatingAudio.vue'
 import Hero from './components/Hero.vue'
 import StoryTimeline from './components/StoryTimeline.vue'
@@ -7,6 +8,24 @@ import Couple from './components/Couple.vue'
 import TransitionPhoto from './components/TransitionPhoto.vue'
 import Gallery from './components/Gallery.vue'
 import ThankYou from './components/ThankYou.vue'
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animation')
+        // Optional: Stop observing once animated
+        // observer.unobserve(entry.target)
+      }
+    })
+  }, {
+    threshold: 0.1
+  })
+
+  document.querySelectorAll('.is-animation').forEach((el) => {
+    observer.observe(el)
+  })
+})
 </script>
 
 <template>
