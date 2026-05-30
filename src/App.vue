@@ -11,6 +11,7 @@ import ThankYou from './components/ThankYou.vue'
 import GuestbookModal from './components/GuestbookModal.vue'
 
 const isGuestbookOpen = ref(false);
+const guestbookRefreshTrigger = ref(0);
 
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {
@@ -55,42 +56,61 @@ onMounted(() => {
     <TransitionPhoto />
 
     <!-- Section 6: Gallery + RSVP Form + Countdown -->
-    <Gallery />
+    <Gallery @form-submitted="guestbookRefreshTrigger++" />
 
     <!-- Section 7: Thank You -->
     <ThankYou />
   </div>
 
   <!-- Floating Guestbook Button -->
-  <button class="floating-guestbook-btn" @click="isGuestbookOpen = true">
-    <span class="icon">💬</span>
+  <button class="floating-guestbook-btn" :class="{ 'is-open': isGuestbookOpen }" @click="isGuestbookOpen = !isGuestbookOpen">
+    <img v-if="!isGuestbookOpen" src="./assets/images/gallery-5.webp" alt="Guestbook" class="thumbnail-icon" />
+    <span v-else class="close-icon">✕</span>
   </button>
-  <GuestbookModal :isOpen="isGuestbookOpen" @close="isGuestbookOpen = false" />
+  <GuestbookModal :isOpen="isGuestbookOpen" :refreshTrigger="guestbookRefreshTrigger" @close="isGuestbookOpen = false" />
 </template>
 
 <style>
 .floating-guestbook-btn {
   position: fixed;
-  bottom: 80px;
+  bottom: 20px;
   right: 20px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background: linear-gradient(135deg, #f7b2c0, #f68e9d);
   color: white;
-  border: none;
+  border: 2px solid #fff;
   box-shadow: 0 4px 15px rgba(246, 142, 157, 0.4);
   cursor: pointer;
   z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s;
+  padding: 0;
+  overflow: hidden;
 }
 
 .floating-guestbook-btn:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 20px rgba(246, 142, 157, 0.6);
+}
+
+.floating-guestbook-btn.is-open {
+  background: #ff5274;
+}
+
+.thumbnail-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.close-icon {
+  font-size: 24px;
+  line-height: 1;
+  font-weight: bold;
 }
 </style>

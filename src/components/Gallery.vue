@@ -60,6 +60,8 @@ const submitError = ref(null);
 const showGiftModal = ref(false);
 const zoomedQr = ref(null);
 
+const emit = defineEmits(["form-submitted"]);
+
 const openZoom = (imgSrc) => {
   zoomedQr.value = imgSrc;
 };
@@ -91,6 +93,7 @@ const submitForm = async () => {
 
     // Lưu ý: với mode 'no-cors' thì fetch sẽ không trả về lỗi rõ ràng nên ta cứ hiện thông báo thành công
     submitSuccess.value = true;
+    emit("form-submitted");
     formName.value = "";
     formGuest.value = "";
     formWish.value = "";
