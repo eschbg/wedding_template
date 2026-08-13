@@ -19,9 +19,6 @@ import gallery10 from "../assets/images/gallery-10.webp";
 // --- Calendar image ---
 import calendarImg from "../assets/images/calendar.webp";
 
-// --- QR Images ---
-import brideQr from "../assets/images/qr-cd.webp";
-import groomQr from "../assets/images/qr-cr.webp";
 
 // === GALLERY ===
 const images = [
@@ -57,12 +54,6 @@ const formAttend = ref("");
 const isSubmitting = ref(false);
 const submitSuccess = ref(false);
 const submitError = ref(null);
-const showGiftModal = ref(false);
-const zoomedQr = ref(null);
-
-const openZoom = (imgSrc) => {
-  zoomedQr.value = imgSrc;
-};
 
 const api = axios.create({ baseURL: "http://localhost:8080", timeout: 10000 });
 
@@ -244,20 +235,6 @@ onUnmounted(() => {
           </div>
         </div>
 
-        <!-- "GỬI QUÀ MỪNG CƯỚI" button -->
-        <div
-          id="w-gqdd8wv9"
-          class="com-button p-absolute"
-          @click="showGiftModal = true"
-        >
-          <div class="button-css full-height full-width">
-            <span class="button-loader"></span>
-            <div class="button-text full-width u-select-none">
-              GỬI QUÀ MỪNG CƯỚI
-            </div>
-          </div>
-        </div>
-
         <!-- Calendar image -->
         <div
           id="w-5x709miw"
@@ -368,7 +345,7 @@ onUnmounted(() => {
                 <textarea
                   v-model="formWish"
                   class="full-width full-height"
-                  :placeholder="`                                                                                                           Gửi lời chúc đến Bá Nam & Thùy Dung nhé!`"
+                  :placeholder="`                                                                                                           Gửi lời chúc đến Đức Dương & Thanh Hằng nhé!`"
                   name="guiloichuc"
                 ></textarea>
               </div>
@@ -474,194 +451,6 @@ onUnmounted(() => {
     </div>
   </div>
 
-  <!-- Gift Modal (QR codes) -->
-  <div
-    v-if="showGiftModal"
-    class="com-popup popup-center"
-    style="
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1000001;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    "
-  >
-    <div
-      class="popup-backdrop"
-      @click="showGiftModal = false"
-      style="position: fixed; inset: 0; background: transparent; z-index: 0"
-    ></div>
-    <div
-      style="
-        position: relative;
-        background: #fff;
-        border-radius: 16px;
-        padding: 28px 20px;
-        max-width: 360px;
-        width: 92%;
-        text-align: center;
-        z-index: 10;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-      "
-    >
-      <button
-        @click="showGiftModal = false"
-        style="
-          position: absolute;
-          top: 10px;
-          right: 12px;
-          background: none;
-          border: none;
-          font-size: 22px;
-          cursor: pointer;
-          color: #888;
-          padding: 0 8px;
-        "
-      >
-        ×
-      </button>
-      <h3
-        style="
-          font-family: &quot;Taviraj&quot;, sans-serif;
-          color: #6d583d;
-          margin-bottom: 6px;
-          font-size: 18px;
-        "
-      >
-        Gửi Quà Mừng Cưới
-      </h3>
-      <p style="font-size: 12px; color: #888; margin-bottom: 6px">
-        Cảm ơn tấm lòng thương yêu của bạn!
-      </p>
-      <p
-        style="
-          font-size: 11px;
-          color: #d9534f;
-          margin-bottom: 16px;
-          animation: pulse 1.5s infinite;
-        "
-      >
-        (Nhấn vào ảnh để phóng to)
-      </p>
-
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px">
-        <div>
-          <div class="qr-zoom-container" @click.stop="openZoom(brideQr)">
-            <img
-              loading="lazy"
-              :src="brideQr"
-              alt="QR Cô Dâu Thùy Dung"
-              class="qr-zoom-img"
-            />
-          </div>
-          <p
-            style="
-              font-size: 12px;
-              color: #6d583d;
-              margin-top: 6px;
-              font-family: &quot;Taviraj&quot;, sans-serif;
-              font-weight: bold;
-            "
-          >
-            Cô Dâu (Thùy Dung)
-          </p>
-        </div>
-        <div>
-          <div class="qr-zoom-container" @click.stop="openZoom(groomQr)">
-            <img
-              loading="lazy"
-              :src="groomQr"
-              alt="QR Chú Rể Bá Nam"
-              class="qr-zoom-img"
-            />
-          </div>
-          <p
-            style="
-              font-size: 12px;
-              color: #6d583d;
-              margin-top: 6px;
-              font-family: &quot;Taviraj&quot;, sans-serif;
-              font-weight: bold;
-            "
-          >
-            Chú Rể (Bá Nam)
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Zoomed QR Modal -->
-  <div
-    v-if="zoomedQr"
-    class="com-popup popup-center"
-    style="
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1000005;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(0, 0, 0, 0.8);
-    "
-  >
-    <div
-      class="popup-backdrop"
-      @click="zoomedQr = null"
-      style="
-        position: fixed;
-        inset: 0;
-        background: transparent;
-        cursor: zoom-out;
-        z-index: 0;
-      "
-    ></div>
-    <div
-      style="position: relative; max-width: 90%; max-height: 90%; z-index: 10"
-    >
-      <img
-        loading="lazy"
-        :src="zoomedQr"
-        alt="Zoomed QR"
-        style="
-          max-width: 100%;
-          max-height: 85vh;
-          border-radius: 12px;
-          border: 4px solid #fff;
-          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-        "
-      />
-      <button
-        @click="zoomedQr = null"
-        style="
-          position: absolute;
-          top: -15px;
-          right: -15px;
-          background: #fff;
-          border: none;
-          font-size: 24px;
-          cursor: pointer;
-          color: #000;
-          border-radius: 50%;
-          width: 36px;
-          height: 36px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        "
-      >
-        ×
-      </button>
-    </div>
-  </div>
 </template>
 
 <style scoped>

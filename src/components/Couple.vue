@@ -23,7 +23,7 @@
           </div>
         </div>
 
-        <!-- Bride group: "Cô dâu THÙY DUNG" -->
+        <!-- Bride group: "Cô dâu THANH HẰNG" -->
         <div id="w-6kkr2u3v" class="p-absolute is-animation group-auto-scroll sroll-size">
           <div class="group-container">
             <div id="w-alg887lu" class="com-text-block p-absolute">
@@ -33,13 +33,13 @@
             </div>
             <div id="w-60gs9iiz" class="com-text-block p-absolute">
               <div class="text-block">
-                <h1 class="text-block-css full-width">THÙY DUNG<br></h1>
+                <h1 class="text-block-css full-width">THANH HẰNG<br></h1>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Groom group: "Chú rể BÁ NAM" -->
+        <!-- Groom group: "Chú rể ĐỨC DƯƠNG" -->
         <div id="w-o3q9pyga" class="p-absolute is-animation group-auto-scroll sroll-size">
           <div class="group-container">
             <div id="w-53wf5hzz" class="com-text-block p-absolute">
@@ -49,7 +49,7 @@
             </div>
             <div id="w-xp30b5wi" class="com-text-block p-absolute">
               <div class="text-block">
-                <h1 class="text-block-css full-width">BÁ NAM<br></h1>
+                <h1 class="text-block-css full-width">ĐỨC DƯƠNG<br></h1>
               </div>
             </div>
           </div>
@@ -59,7 +59,7 @@
         <div id="w-gackq6hi" class="com-image-block p-absolute is-animation">
           <div class="full-width full-height">
             <div class="image-block-css p-relative full-width full-height full-mask-size mask-position">
-              <div class="image-background p-absolute" role="img" aria-label="Chú rể Bá Nam"></div>
+              <div class="image-background p-absolute" role="img" aria-label="Chú rể Đức Dương"></div>
               <div class="image-gradient-border"></div>
             </div>
           </div>
@@ -69,7 +69,7 @@
         <div id="w-l628a6sl" class="com-image-block p-absolute is-animation">
           <div class="full-width full-height">
             <div class="image-block-css p-relative full-width full-height full-mask-size mask-position">
-              <div class="image-background p-absolute" role="img" aria-label="Cô dâu Thùy Dung"></div>
+              <div class="image-background p-absolute" role="img" aria-label="Cô dâu Thanh Hằng"></div>
               <div class="image-gradient-border"></div>
             </div>
           </div>

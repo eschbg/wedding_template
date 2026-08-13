@@ -9,7 +9,7 @@
         <!-- Big portrait background photo -->
         <div id="w-utq42110" class="com-image-block p-absolute">
           <div class="image-block-css p-relative full-width full-height full-mask-size mask-position">
-            <div class="image-background p-absolute" role="img" aria-label="Bá Nam & Thùy Dung"></div>
+            <div class="image-background p-absolute" role="img" aria-label="Đức Dương & Thanh Hằng"></div>
             <div class="overlay"></div>
             <div class="image-gradient-border"></div>
           </div>
@@ -25,10 +25,10 @@
           </div>
         </div>
 
-        <!-- BÁ NAM THÙY DUNG names -->
+        <!-- ĐỨC DƯƠNG THANH HẰNG names -->
         <div id="w-4onqz968" class="com-text-block p-absolute is-animation">
           <div class="text-block">
-            <h1 class="text-block-css full-width">BÁ NAM<br>THÙY DUNG<br></h1>
+            <h1 class="text-block-css full-width">ĐỨC DƯƠNG<br>THANH HẰNG<br></h1>
           </div>
         </div>
 
@@ -49,7 +49,7 @@
         <!-- Date -->
         <div id="w-jkdnlfq9" class="com-text-block p-absolute is-animation">
           <div class="text-block">
-            <h1 class="text-block-css full-width">06.06.2026<br></h1>
+            <h1 class="text-block-css full-width">20.09.2026<br></h1>
           </div>
         </div>
 

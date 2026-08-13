@@ -80,7 +80,7 @@ import gallery2 from "../assets/images/gallery-2.webp";
               <div
                 class="image-background p-absolute"
                 role="img"
-                aria-label="Bá Nam & Thùy Dung"
+                aria-label="Đức Dương & Thanh Hằng"
                 :style="{ backgroundImage: `url(${gallery1})`, width: '100% !important', height: '100% !important', top: '0', left: '0' }"
               ></div>
               <div class="image-gradient-border" style="display: none !important;"></div>
@@ -114,7 +114,7 @@ import gallery2 from "../assets/images/gallery-2.webp";
               <div
                 class="image-background p-absolute"
                 role="img"
-                aria-label="Bá Nam & Thùy Dung"
+                aria-label="Đức Dương & Thanh Hằng"
                 :style="{ backgroundImage: `url(${gallery2})`, width: '100% !important', height: '100% !important', top: '0', left: '0' }"
               ></div>
               <div class="image-gradient-border" style="display: none !important;"></div>
@@ -145,7 +145,7 @@ import gallery2 from "../assets/images/gallery-2.webp";
           </div>
         </div>
 
-        <!-- "D" initial — KD-Aureligena font (Cursive overlay) -->
+        <!-- "H" initial — KD-Aureligena font (Cursive overlay) -->
         <div
           id="w-06fskfrb"
           class="com-text-block p-absolute is-animation"
@@ -160,15 +160,15 @@ import gallery2 from "../assets/images/gallery-2.webp";
                 font-size: 64px !important;
               "
             >
-              D
+              H
             </h2>
           </div>
         </div>
 
-        <!-- "N" initial — FzQuagera font (Serif base) -->
+        <!-- "D" initial — FzQuagera font (Serif base) -->
         <div id="w-whvexl1r" class="com-text-block p-absolute is-animation">
           <div class="text-block">
-            <h2 class="text-block-css full-width">N</h2>
+            <h2 class="text-block-css full-width">D</h2>
           </div>
         </div>
       </div>

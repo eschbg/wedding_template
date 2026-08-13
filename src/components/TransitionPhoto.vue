@@ -8,7 +8,7 @@
         <!-- Full-page photo -->
         <div id="w-0b1rj2zw" class="com-image-block p-absolute">
           <div class="image-block-css p-relative full-width full-height full-mask-size mask-position">
-            <div class="image-background p-absolute" role="img" aria-label="Bá Nam & Thùy Dung"></div>
+            <div class="image-background p-absolute" role="img" aria-label="Đức Dương & Thanh Hằng"></div>
             <div class="image-gradient-border"></div>
           </div>
         </div>

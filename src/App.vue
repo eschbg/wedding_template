@@ -17,16 +17,16 @@ import ThankYou from './components/ThankYou.vue'
   <div class="pageview">
     <div id="webcake-alert-msg" class="w-alert-message-wrapper" style="display: none; z-index: 9999999;"></div>
 
-    <!-- Section 1: Hero — Bá Nam & Thùy Dung, 06.06.2026 -->
+    <!-- Section 1: Hero — Đức Dương & Thanh Hằng, 20.09.2026 -->
     <Hero />
 
-    <!-- Section 2: Save The Date — 06.06.2026, Polaroid photos -->
+    <!-- Section 2: Save The Date — 20.09.2026, Polaroid photos -->
     <StoryTimeline />
 
     <!-- Section 3: Invitation — Vu Quy + Thanh Hon details -->
     <RsvpForm />
 
-    <!-- Section 4: Couple — Cô Dâu (Thùy Dung) & Chú Rể (Bá Nam) -->
+    <!-- Section 4: Couple — Cô Dâu (Thanh Hằng) & Chú Rể (Đức Dương) -->
     <Couple />
 
     <!-- Section 5: Transition — Full-page photo -->

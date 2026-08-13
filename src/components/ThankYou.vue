@@ -44,7 +44,7 @@
         <!-- HAPPY WEDDING text -->
         <div id="w-jojizcdn" class="com-text-block p-absolute">
           <div class="text-block">
-            <h3 class="text-block-css full-width">HAPPY WEDDING BÁ NAM &amp; THÙY DUNG<br></h3>
+            <h3 class="text-block-css full-width">HAPPY WEDDING ĐỨC DƯƠNG &amp; THANH HẰNG<br></h3>
           </div>
         </div>
 
